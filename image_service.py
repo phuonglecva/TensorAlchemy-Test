@@ -233,9 +233,11 @@ image_generation = ImageGeneration
 def image_generation(image_generation: dict):
     # Convert the request to ImageGeneration object
     image_generation_obj = convert_dict_to_image_generation(image_generation)
-    image_response_dict = image_generation.generate(image_generation_obj)
-    return convert_image_generation_to_dict(image_response_dict)
-
+    image_generation_obj = image_generation.generate(image_generation_obj)
+    image_dict = convert_image_generation_to_dict(image_generation_obj)
+    return {
+        "data": image_dict
+    }
 
 if __name__ == "__main__":
     import uvicorn

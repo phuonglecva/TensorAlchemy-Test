@@ -258,7 +258,7 @@ class BaseMiner(ABC):
         
         response = requests.post("http://localhost:8000/image_generation", json=payload)
         response = response.json()
-        return convert_dict_to_image_generation(response)
+        return convert_dict_to_image_generation(response["data"])
         # """
         # Image generation logic shared between both text-to-image and image-to-image
         # """
