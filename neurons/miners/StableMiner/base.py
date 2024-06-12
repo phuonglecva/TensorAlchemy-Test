@@ -256,7 +256,7 @@ class BaseMiner(ABC):
         payload = convert_image_generation_to_dict(synapse)
         import requests
         
-        response = requests.post("http://localhost:1234/image_generation", json=payload)
+        response = requests.post("http://localhost:8000/image_generation", json=payload)
         response = response.json()
         return convert_dict_to_image_generation(response)
         # """
