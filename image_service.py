@@ -49,19 +49,19 @@ def convert_image_generation_to_dict(image_generation: ImageGeneration) -> dict:
         "steps": image_generation.steps,
     }
 # generate example image_generation object
-image_dict = {
-    "prompt": "Bird in the sky",
-    "negative_prompt": None,
-    "prompt_image": [],
-    "images": [],
-    "num_images_per_prompt": 1,
-    "height": 1024,
-    "width": 1024,
-    "generation_type": "text_to_image",
-    "guidance_scale": 7.5,
-    "seed": 1024,
-    "steps": 50,
-}
+# image_dict = {
+#     "prompt": "Bird in the sky",
+#     "negative_prompt": None,
+#     "prompt_image": [],
+#     "images": [],
+#     "num_images_per_prompt": 1,
+#     "height": 1024,
+#     "width": 1024,
+#     "generation_type": "text_to_image",
+#     "guidance_scale": 7.5,
+#     "seed": 1024,
+#     "steps": 50,
+# }
 def convert_dict_to_image_generation(dict_obj: dict) -> ImageGeneration:
     # Convert the dictionary to an ImageGeneration object
     images = dict_obj["images"]
